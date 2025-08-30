@@ -14,7 +14,7 @@ public class Solution {
 
             fast = fast.next.next;
 
-            if(slow != null && fast != null && slow == fast) return true;
+            if(slow == fast) return true;
         }
 
         return false;
