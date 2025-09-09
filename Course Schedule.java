@@ -14,9 +14,11 @@ class Solution {
 
             int v = arr[1];
 
-            indegree[v]++;
+            // v ---> u
 
-            map.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
+            indegree[u]++;
+
+            map.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
         }
 
         Queue<Integer> q = new LinkedList<>();
